@@ -1,5 +1,3 @@
-// cache the dom (storing for future use)
-// & reset everything to 0 value
 let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
