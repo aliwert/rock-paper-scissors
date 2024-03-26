@@ -15,6 +15,6 @@
 -Real-time display of results.<br/>
 
 ### Technologies Used
-HTML: Markup language for structuring the webpage.<br/>
-CSS: Styling language for designing the appearance of the webpage.<br/>
-JavaScript: Programming language for implementing game logic and interactivity.
+HTML<br/>
+CSS<br/>
+JavaScript
