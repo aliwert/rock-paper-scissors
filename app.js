@@ -14,17 +14,25 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-
 function convertCase(anythingIwant) {
   if (anythingIwant === "paper") return "Paper";
   if (anythingIwant === "scissors") return "Scissors";
   return "Rock";
 }
 
+function checkWinner() {
+  if (userScore === 10) {
+    result_div.innerHTML = "<p>Congratulations! You've won the game!</p>";
+    resetGame();
+  } else if (computerScore === 10) {
+    result_div.innerHTML = "<p>Sorry, you've lost the game!</p>";
+    resetGame();
+  }
+}
 
 function win(user, computer) {
   userScore++;
-  
+
   userScore_span.innerHTML = userScore;
   const userName = " (user)".fontsize(3).sup();
   const compName = " (comp)".fontsize(3).sup();
@@ -34,11 +42,13 @@ function win(user, computer) {
   const roundStatus = document.getElementById(user);
   roundStatus.classList.add("winningStyles");
   setTimeout(() => roundStatus.classList.remove("winningStyles"), 300);
+
+  checkWinner();
 }
 
 function loses(user, computer) {
   computerScore++;
-  
+
   computerScore_span.innerHTML = computerScore;
   const userName = " (user)".fontsize(3).sup();
   const compName = " (comp)".fontsize(3).sup();
@@ -48,6 +58,8 @@ function loses(user, computer) {
   const roundStatus = document.getElementById(user);
   roundStatus.classList.add("losingStyles");
   setTimeout(() => roundStatus.classList.remove("losingStyles"), 300);
+
+  checkWinner();
 }
 
 function draw(user, computer) {
@@ -56,7 +68,7 @@ function draw(user, computer) {
   result_div.innerHTML = `<p>It was a draw! You both chose ${convertCase(
     user
   )}</p>`;
-  
+
   const roundStatus = document.getElementById(user);
   roundStatus.classList.add("drawStyles");
   setTimeout(() => roundStatus.classList.remove("drawStyles"), 300);
@@ -70,13 +82,13 @@ function game(userChoice) {
     case "rockscissors":
     case "scissorspaper":
       win(userChoice, computerChoice);
-      
+
       break;
     case "rockpaper":
     case "scissorsrock":
     case "paperscissors":
       loses(userChoice, computerChoice);
-      
+
       break;
     case "rockrock":
     case "scissorsscissors":
@@ -87,6 +99,12 @@ function game(userChoice) {
   }
 }
 
+function resetGame() {
+  userScore = 0;
+  computerScore = 0;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+}
 
 function main() {
   rock_div.addEventListener("click", () => game("rock"));
