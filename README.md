@@ -1,6 +1,5 @@
 # Rock, Paper, Scissors Game
-
-### This is a simple implementation of the classic game "Rock, Paper, Scissors" using HTML, CSS, and JavaScript.
+This is a simple implementation of the classic game "Rock, Paper, Scissors" using HTML, CSS, and JavaScript.
 
 ### How to Play
 -Open the index.html file in your web browser.<br/>
