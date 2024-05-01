@@ -13,7 +13,7 @@
 - Random selection of the computer's choice.<br/>
 - Real-time display of results.<br/>
 
-### Technologies Used
-HTML<br/>
-CSS<br/>
-JavaScript
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
