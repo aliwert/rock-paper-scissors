@@ -8,10 +8,10 @@
 - The result of the round will be displayed on the screen, indicating whether you win, lose, or it's a tie.<br/>
 - Repeat steps 2-4 to play again.<br/>
 
-### Features
--Simple and intuitive user interface.<br/>
--Random selection of the computer's choice.<br/>
--Real-time display of results.<br/>
+## Features
+- Simple and intuitive user interface.<br/>
+- Random selection of the computer's choice.<br/>
+- Real-time display of results.<br/>
 
 ### Technologies Used
 HTML<br/>
